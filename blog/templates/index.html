@@ -1,7 +1,11 @@
 {% if posts %}
   {% for post in posts %}
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
+  <a href="/{{ post.id }}">
+    <div class="post-index">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.content }}</p>
+    </div>
+  </a>
   {% endfor %}
 {% else %}
    <h1>No posts yet.</h1>
